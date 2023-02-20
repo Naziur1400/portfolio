@@ -1,0 +1,137 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+        <!-- ...::: Start Breadcrumb Section :::... -->
+        <div class="breadcrumb-section section-bg overflow-hidden pos-relative">
+            <div class="breadcrumb-shape-top-left"></div>
+            <div class="breadcrumb-shape-bottom-right"></div>
+            <div class="breadcrumb-box">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="breadcrumb-content">
+                                <h2 class="title">Project Details</h2>
+                                <ul class="breadcrumb-link">
+                                    <li><a href="{% url 'index' %}">Home</a></li>
+                                    <li class="active" aria-current="page">Project Details</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ...::: End Breadcrumb Section :::... -->
+
+        <!-- .....:::::: Start Project Details Section :::::.... -->
+        <div class="project-details-section section-gap-tb-165">
+            <div class="project-details-box">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <!-- Start Project Content Section -->
+                            <div class="project-content-section pos-relative">
+                                <div class="project-hero-image">
+                                    <img src="{{ projects.project_first_pic.url }}" alt="">
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-8 ">
+                                        <!-- Start Section Content -->
+                                        <div class="default-content-style pos-relative p-2">
+                                            <span class="section-tag">{{projects.client}}</span>
+                                            <h2 class="title">{{projects.title}}</h2>
+                                            <p>{{projects.project_description}}</p>
+
+                                            <h3 class="sub-title">How to complete this?</h3>
+                                            <p>{{projects.summary}}</p>
+
+                                            <ul class="content-list-item content-list-with-icon">
+                                                <li>
+                                                    <div class="left">
+                                                        <div class="icon">
+                                                            <i class="icofont-bulb-alt"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="right">
+                                                        <h4 class="list-title">Idea Generate</h4>
+                                                        <p>{{projects.idea}}.</p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="left">
+                                                        <div class="icon">
+                                                            <i class="icofont-ruler-pencil-alt-2"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="right">
+                                                        <h4 class="list-title">Reasearch & Sketching</h4>
+                                                        <p>{{projects.research}}</p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="left">
+                                                        <div class="icon">
+                                                            <i class="icofont-airplane"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="right">
+                                                        <h4 class="list-title">Launced Project</h4>
+                                                        <p>{{projects.launch}}</p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+
+                                            <h3 class="sub-title">Project result</h3>
+                                            {{projects.result}}
+                                        </div>
+                                        <!-- End Section Content -->
+                                    </div>
+                                    <div class="col-xl-3 col-lg-4 offset-xl-1">
+                                        <div class="project-sidebar">
+                                            <h3 class="title">Information</h3>
+                                            <!-- Start Project Sidebar Item -->
+                                            <ul class="project-sidebar-list-item">
+                                                <!-- Start Project Single Box -->
+                                                <li class="project-sidebar-single-box">
+                                                    <h6 class="title-text">Project Name</h6>
+                                                    <span class="text">{{projects.client}}</span>
+                                                </li>
+                                                <!-- End Project Single Box -->
+                                                <!-- Start Project Single Box -->
+                                                <li class="project-sidebar-single-box">
+                                                    <h6 class="title-text">Client</h6>
+                                                    <span class="text">{{projects.client}}</span>
+                                                </li>
+                                                <!-- End Project Single Box -->
+                                                <!-- Start Project Single Box -->
+                                                <li class="project-sidebar-single-box">
+                                                    <h6 class="title-text">Check out the website</h6>
+                                                    <a href="{{projects.project_url}}"><span class="text">{{projects.project_url}}</span></a>
+                                                </li>
+                                                <!-- End Project Single Box -->
+                                                <!-- Start Project Single Box -->
+                                            </ul>
+                                            <!-- End Project Sidebar Item -->
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- End Project Content Section -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- .....:::::: End Project Details Section :::::.... -->
+
+        {% include 'partials/footer.html' %}
+    {% endblock %}
+
+
+
+

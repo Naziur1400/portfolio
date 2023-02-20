@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+    {% include 'partials/header.html' %}
+
+    <main class="main-wrapper">
+
+
+        <!-- Offcanvas Overlay -->
+        <div class="offcanvas-overlay"></div>
+
+        {% include 'portfolio/hero.html' %}
+
+        {% include 'portfolio/services.html' %}
+        {% include 'portfolio/skills.html' %}
+
+        {% include 'portfolio/projects.html' %}
+        {% include 'portfolio/contact.html' %}
+
+
+
+
+
+
+
+
+
+
+
+        <!-- material-scrolltop button -->
+    <button class="material-scrolltop" type="button"></button>
+    </main>
+
+    {% include 'partials/footer.html' %}
+
+{% endblock %}
+
+

@@ -1,0 +1,71 @@
+
+{% load static %}
+{% load widget_tweaks %}
+
+
+
+
+
+
+<!-- ...::: Start Contact Section :::... -->
+<div class="contact-section pb-4" id="contact">
+    <div class="contact-box pos-relative">
+        <div class="container">
+            <div class="col-8 col-xl-8 d-block d-md-flex justify-content-between">
+                <div class="contact-form-wrapper ">
+                    <!-- Start Section Content -->
+                    <div class="content">
+                        <span class="section-tag">Get In Touch</span>
+                        <h2 class="title">If you have any porject or need help. Contact me</h2>
+                    </div>
+                    <!-- End Section Content -->
+                    <!-- Start Contact Form Box -->
+                    <div class="contact-form-box">
+                        <form id="contact-form" class="default-form contact-form" action="{% url 'index' %}" method="post" >
+                            {% csrf_token %}
+                            <div class="row mb-n6">
+                              <div class="col-xl-6 mb-6">
+                                <div class="default-form-group">
+                                  {% render_field form.name class="form-control" placeholder="Full Name" %}
+                              </div>
+                          </div>
+                          <div class="col-xl-6 mb-6">
+                            <div class="default-form-group">
+                              {% render_field form.email class="form-control" placeholder="Your Email" %}
+                          </div>
+                      </div>
+                      <div class="col-xl-6 mb-6">
+                        <div class="default-form-group">
+                          {% render_field form.phone class="form-control" placeholder="Your Phone" %}
+                      </div>
+                  </div>
+                  <div class="col-xl-6 mb-6">
+                    <div class="default-form-group">
+                      {% render_field form.subject class="form-control" placeholder="Subject" %}
+                  </div>
+              </div>
+              <div class="col-xl-12 mb-12">
+                <div class="default-form-group">
+                  {% render_field form.message class="form-control" placeholder="Message" %}
+              </div>
+          </div>
+          <div class="col-xl-6 mb-6">
+            <div class="default-form-group tex-center">
+                <input type="submit" name="Submit" class="btn btn-lg btn-outline-one">
+            </div>
+
+        </div>
+        <p class="form-messege"></p>
+    </div>
+</form>
+</div>
+
+<!-- End Contact Form Box -->
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- ...::: End Contact Section :::... -->
+

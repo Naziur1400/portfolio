@@ -1,0 +1,68 @@
+{% load static %}
+
+        <!-- ...::: Start Footer Section :::... -->
+        <footer class="footer-section section-bg overflow-hidden pos-relative">
+            <div class="footer-inner-shape-top-left"></div>
+            <div class="footer-inner-shape-top-right"></div>
+            <div class="footer-section-top section-gap-t-165">
+
+            </div>
+            {% for i in info %}
+            <div class="footer-center section-gap-tb-125">
+                <div class="container">
+                    <div class="row justify-content-between align-items-center mb-n5">
+                        <div class="col-auto mb-5">
+                            <!-- Start Single Footer Info -->
+                            <div class="footer-single-info">
+                                <a href="tel:+{{i.phone_no}}" class="info-box">
+                                    <span class="icon"><i class="icofont-phone"></i></span>
+                                    <span class="text">{{i.phone_no}}</span>
+                                </a>
+                            </div>
+                            <!-- Start Single Footer Info -->
+                        </div>
+                        <div class="col-auto mb-5">
+                            <!-- Start Single Footer Info -->
+                            <div class="footer-single-info">
+                                <a href="mailto:{{i.email}}" class="info-box">
+                                    <span class="icon"><i class="icofont-envelope-open"></i></span>
+                                    <span class="text">{{i.email}}</span>
+                                </a>
+                            </div>
+                            <!-- Start Single Footer Info -->
+                        </div>
+                        <div class="col-auto mb-5">
+                            <!-- Start Single Footer Info -->
+                            <div class="footer-single-info">
+                                <ul class="social-link">
+                                    <li><a href="{{i.fb_link}}" target="_blank"><i class="icofont-facebook"></i></a></li>
+                                    <li><a href="{{i.github_link}}" target="_blank"><i class="icofont-github"></i></a></li>
+                                    <li><a href="{{i.linkedin_link}}" target="_blank"><i class="icofont-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                            <!-- Start Single Footer Info -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            <div class="footer-bottom mt-4">
+                <div class="container">
+                    <div class="row justify-content-center justify-content-md-between align-items-center flex-column-reverse flex-md-row">
+                        <div class="col-auto">
+                            <div class="footer-copyright">
+                                <p class="copyright-text">&copy; 2022 <a href="{% url 'index' %}">Portfolio</a> Made with <i class="icofont-heart"></i> by <a href="{% url 'index' %}" target="_blank">Naziur</a> </p>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <a href="{% url 'index' %}" class="footer-logo">
+                                <div class="logo">
+                                    <img src="{% static 'images/logo/logo.png' %}" alt="">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- ...::: End Footer Section :::... -->
